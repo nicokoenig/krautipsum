@@ -1,0 +1,111 @@
+//https://coolors.co/30292f-f87060-e8c547-b5c2b7-fcfcfc
+//https://fonts.google.com/specimen/Oswald?selection.family=Oswald|Roboto:300
+//font-family: 'Oswald', sans-serif;
+//font-family: 'Roboto', sans-serif;
+//font-family: 'Bungee Shade', cursive;
+//font-family: 'Open Sans', sans-serif;
+$color1: rgba(48, 41, 47, 1);
+$color2: rgba(248, 112, 96, 1);
+$color3: rgba(232, 197, 71, 1);
+$color4: rgba(181, 194, 183, 1);
+$color5: rgba(252, 252, 252, 1);
+$dark: $color1;
+$rose: $color2;
+$yellow: $color3;
+$ashgrey: $color4;
+$white: $color5;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background: $white;
+    color: $dark;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    background: $yellow;
+    border-bottom: 1px solid $rose;
+}
+
+.header__title-wrapper {
+    position: relative;
+    padding: .5rem .2rem;
+    display: inline-block;
+}
+
+.title__main {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    padding-bottom: .5rem;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 1.4rem;
+    color: $dark;
+    border-bottom: 2px solid $rose;
+}
+
+.title__secondary {
+    position: relative;
+    color: $dark;
+    font-weight: normal;
+    margin: 0;
+    padding: 0.5rem 0;
+    font-size: .8rem;
+}
+
+.content {
+    font-size: 1rem;
+}
+
+.content__wrapper {
+    padding: 1rem 1rem;
+    width: 90%;
+    margin: auto;
+}
+
+.footer {
+    padding: 1em;
+    font-size: 0.8rem;
+    background: $yellow;
+    border-top: 1px solid $rose;
+}
+
+@media (min-width: 800px) {
+    .header__title-wrapper {
+        padding: 1rem .4rem;
+    }
+    .title__main {
+        font-size: 2rem;
+        border-bottom: 3px solid $rose;
+    }
+    .title__secondary {
+        font-size: 1rem;
+    }
+    .content__wrapper {
+        width: 70%;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header__title-wrapper {
+        padding: 1.5rem .8rem;
+    }
+    .title__main {
+        font-size: 3rem;
+        border-bottom: 4px solid $rose;
+    }
+    .title__secondary {
+        font-size: 1.5rem;
+    }
+    .content__wrapper {
+        width: 50%;
+    }
+}
