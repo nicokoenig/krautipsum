@@ -12,7 +12,7 @@ function random(min, max) {
 }
 
 function createParagraph() {
-    let numberOfSentences = random(10, 20);
+    let numberOfSentences = random(10, 15);
     let paragraph = '';
 
     for (let i = 0; i < numberOfSentences; i++) {
@@ -26,9 +26,13 @@ function createParagraph() {
 
 function createSentence() {
     let sentence = '';
-    let numberOfWords = random(4, 7);
+    let numberOfWords = random(3, 6);
 
     switch (numberOfWords) {
+        case 3:
+            sentence = getRandomArticle() + ' ' + getRandomAdjective() + ' ' + getRandomNoun() + '. ';
+            break;
+
         case 4:
             sentence = getRandomArticle() + ' ' + getRandomAdjective() + ' ' + getRandomNoun() + ' ' + getRandomVerb() + '. ';
             break;
@@ -38,11 +42,7 @@ function createSentence() {
             break;
 
         case 6:
-            sentence = getRandomNoun() + ' ' + getRandomNoun() + ' ' + getRandomVerb() + ' ' + getRandomNoun() + ' ' + getRandomVerb() + ' ' + getRandomNoun() + '. ';
-            break;
-
-        case 7:
-            sentence = getRandomNoun() + ' und ' + getRandomNoun() + ' ' + getRandomVerb() + ' ' + getRandomNoun() + ' ' + getRandomAdjective() + ' ' + getRandomNoun() + '. ';
+            sentence = getRandomNoun() + ' und ' + getRandomNoun() + ' ' + getRandomVerb() + ' ' + getRandomAdjective() + ' ' + getRandomNoun() + '. ';
             break;
     }
 
