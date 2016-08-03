@@ -11,7 +11,7 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function createParagraph() {
+function createParagraph(callback) {
     let numberOfSentences = random(10, 15);
     let paragraph = '';
 
@@ -21,7 +21,7 @@ function createParagraph() {
 
     paragraph += exclamations[random(0, exclamations.length - 1)];
 
-    return paragraph;
+    callback(null, paragraph);
 }
 
 function createSentence() {

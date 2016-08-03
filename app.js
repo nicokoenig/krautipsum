@@ -10,10 +10,9 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-
-    // create filler text here
-    var paragraph = krautgenerator.createParagraph();
-    response.render('pages/index', { paragraph: paragraph });
+    krautgenerator.createParagraph(function(error, paragraph) {
+        response.render('pages/index', { paragraph: paragraph });
+    });
 });
 
 app.listen(app.get('port'), function() {
