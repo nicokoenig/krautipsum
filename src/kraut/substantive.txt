@@ -11,6 +11,8 @@ Augenschmaus
 Begrüßungsgeld
 Erbfeind
 Gamaschen
+Hochstapler
+Schenkelbürste
 Gemächt
 Mettigel
 Fleischwarenfachverkäuferin
@@ -21,6 +23,7 @@ Schutzschwalbe
 Libero
 Mundraub
 Scharmützel
+Absacker
 Schmock
 Thusnelda
 Bagage
@@ -29,6 +32,7 @@ Aue
 Augenweide
 Mumpitz
 Freikörperkultur
+Waldschrat
 Abort
 Jungfer
 Firlefanz
@@ -78,6 +82,7 @@ Bürgermeisterstück
 Bordsteinschwalbe
 Waschweib
 Damenbart
+Schnösel
 Dreikäsehoch
 Flausen
 Flegel
@@ -85,7 +90,34 @@ Flickschusterei
 Geschmeide
 Gesinde
 Haudegen
+Kastrat
 Humbug
+Fatzke
 Lümmeltüte
+Fressalien
 Franzosenkrankheit
 Müßiggang
+Fracksausen
+Fuchtel
+Lump
+Quacksalber
+Zeche
+Jubelperser
+Ohrenschmaus
+Quasselstrippe
+Unhold
+Wendehals
+Schlüpfer
+Ganove
+Scharlatan
+Übeltäter
+Missetäter
+Dachshund
+Schuhwichse
+Blockwart
+Kesselflicker
+Springinsfeld
+Tausendsassa
+Steckenpferd
+Wuchtbrumme
+Falscher Hase
