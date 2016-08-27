@@ -1,9 +1,3 @@
-//https://coolors.co/30292f-f87060-e8c547-b5c2b7-fcfcfc
-//https://fonts.google.com/specimen/Oswald?selection.family=Oswald|Roboto:300
-//font-family: 'Oswald', sans-serif;
-//font-family: 'Roboto', sans-serif;
-//font-family: 'Bungee Shade', cursive;
-//font-family: 'Open Sans', sans-serif;
 $color1: rgba(48, 41, 47, 1);
 $color2: rgba(248, 112, 96, 1);
 $color3: rgba(232, 197, 71, 1);
@@ -69,6 +63,32 @@ body {
     padding: 1rem 1rem;
     width: 90%;
     margin: auto;
+}
+
+.buttons__wrapper {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.button__copy {
+    border: 0;
+    padding: .5rem;
+    border-radius: 5px;
+    background: lighten($yellow, 20%);
+    font-size: .8rem;
+    font-weight: 400;
+    cursor: pointer;
+    &:before {
+        padding-right: .5rem;
+    }
+    &:hover {
+        transition: background .2s ease-in-out;
+        background: $yellow;
+    }
+    &:focus {
+        outline: 0;
+    }
 }
 
 .footer {

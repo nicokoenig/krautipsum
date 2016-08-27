@@ -10,6 +10,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "clipboard": "^1.5.12",
     "ejs": "^2.4.1",
     "express": "^4.14.0",
     "normalize.css": "^4.2.0"

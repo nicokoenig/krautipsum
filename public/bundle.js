@@ -44,8 +44,19 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// css stuff
 	__webpack_require__(1);
 	__webpack_require__(5);
+	__webpack_require__(8);
+
+	// js stuff
+	var Clipboard = __webpack_require__(7);
+
+	// Clipboard stuff
+	var clipboard = new Clipboard('.button__copy');
+	clipboard.on('success', function(e) {
+	    e.clearSelection();
+	});
 
 /***/ },
 /* 1 */
@@ -430,10 +441,92 @@
 
 
 	// module
-	exports.push([module.id, "* {\n  box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  background: #fcfcfc;\n  color: #30292f;\n  font-family: 'Roboto', sans-serif; }\n\n.header {\n  position: relative;\n  text-align: center;\n  background: #e8c547;\n  border-bottom: 1px solid #f87060; }\n\n.header__title-wrapper {\n  position: relative;\n  padding: .5rem .2rem;\n  display: inline-block; }\n\n.title__main {\n  position: relative;\n  padding: 0;\n  margin: 0;\n  padding-bottom: .5rem;\n  font-family: 'Bungee Shade', cursive;\n  font-size: 1.8rem;\n  color: #30292f;\n  border-bottom: 2px solid #f87060; }\n\n.title__secondary {\n  position: relative;\n  color: #30292f;\n  font-weight: 400;\n  margin: 0;\n  padding: 0.5rem 0;\n  font-size: 1rem; }\n\n.content {\n  font-size: 1.1rem;\n  font-weight: 400; }\n\n.content__wrapper {\n  padding: 1rem 1rem;\n  width: 90%;\n  margin: auto; }\n\n.footer {\n  padding: 1em;\n  font-size: 0.8rem;\n  font-weight: 400;\n  background: #e8c547;\n  border-top: 1px solid #f87060;\n  text-align: center; }\n\n@media (min-width: 400px) {\n  .content__wrapper {\n    width: 80%; } }\n\n@media (min-width: 800px) {\n  .header__title-wrapper {\n    padding: 1rem .4rem; }\n  .title__main {\n    font-size: 2.5rem;\n    border-bottom: 3px solid #f87060; }\n  .title__secondary {\n    font-size: 1.5rem;\n    font-weight: 300; }\n  .content__wrapper {\n    width: 65%;\n    font-size: 1.5rem;\n    font-weight: 300; } }\n\n@media (min-width: 1200px) {\n  .header__title-wrapper {\n    padding: 1.5rem .8rem; }\n  .title__main {\n    font-size: 3rem;\n    border-bottom: 4px solid #f87060; }\n  .title__secondary {\n    font-size: 2rem;\n    font-weight: 300; }\n  .content__wrapper {\n    width: 50%;\n    font-size: 2rem;\n    font-weight: 300; } }\n", ""]);
+	exports.push([module.id, "* {\n  box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  background: #fcfcfc;\n  color: #30292f;\n  font-family: 'Roboto', sans-serif; }\n\n.header {\n  position: relative;\n  text-align: center;\n  background: #e8c547;\n  border-bottom: 1px solid #f87060; }\n\n.header__title-wrapper {\n  position: relative;\n  padding: .5rem .2rem;\n  display: inline-block; }\n\n.title__main {\n  position: relative;\n  padding: 0;\n  margin: 0;\n  padding-bottom: .5rem;\n  font-family: 'Bungee Shade', cursive;\n  font-size: 1.8rem;\n  color: #30292f;\n  border-bottom: 2px solid #f87060; }\n\n.title__secondary {\n  position: relative;\n  color: #30292f;\n  font-weight: 400;\n  margin: 0;\n  padding: 0.5rem 0;\n  font-size: 1rem; }\n\n.content {\n  font-size: 1.1rem;\n  font-weight: 400; }\n\n.content__wrapper {\n  padding: 1rem 1rem;\n  width: 90%;\n  margin: auto; }\n\n.buttons__wrapper {\n  position: relative;\n  width: 100%;\n  text-align: center; }\n\n.button__copy {\n  border: 0;\n  padding: .5rem;\n  border-radius: 5px;\n  background: #f3e2a2;\n  font-size: .8rem;\n  font-weight: 400;\n  cursor: pointer; }\n  .button__copy:before {\n    padding-right: .5rem; }\n  .button__copy:hover {\n    transition: background .2s ease-in-out;\n    background: #e8c547; }\n  .button__copy:focus {\n    outline: 0; }\n\n.footer {\n  padding: 1em;\n  font-size: 0.8rem;\n  font-weight: 400;\n  background: #e8c547;\n  border-top: 1px solid #f87060;\n  text-align: center; }\n\n@media (min-width: 400px) {\n  .content__wrapper {\n    width: 80%; } }\n\n@media (min-width: 800px) {\n  .header__title-wrapper {\n    padding: 1rem .4rem; }\n  .title__main {\n    font-size: 2.5rem;\n    border-bottom: 3px solid #f87060; }\n  .title__secondary {\n    font-size: 1.5rem;\n    font-weight: 300; }\n  .content__wrapper {\n    width: 65%;\n    font-size: 1.5rem;\n    font-weight: 300; } }\n\n@media (min-width: 1200px) {\n  .header__title-wrapper {\n    padding: 1.5rem .8rem; }\n  .title__main {\n    font-size: 3rem;\n    border-bottom: 4px solid #f87060; }\n  .title__secondary {\n    font-size: 2rem;\n    font-weight: 300; }\n  .content__wrapper {\n    width: 50%;\n    font-size: 2rem;\n    font-weight: 300; } }\n", ""]);
 
 	// exports
 
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var require;var require;/*!
+	 * clipboard.js v1.5.12
+	 * https://zenorocha.github.io/clipboard.js
+	 *
+	 * Licensed MIT © Zeno Rocha
+	 */
+	!function(t){if(true)module.exports=t();else if("function"==typeof define&&define.amd)define([],t);else{var e;e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this,e.Clipboard=t()}}(function(){var t,e,n;return function t(e,n,o){function i(a,c){if(!n[a]){if(!e[a]){var s="function"==typeof require&&require;if(!c&&s)return require(a,!0);if(r)return r(a,!0);var l=new Error("Cannot find module '"+a+"'");throw l.code="MODULE_NOT_FOUND",l}var u=n[a]={exports:{}};e[a][0].call(u.exports,function(t){var n=e[a][1][t];return i(n?n:t)},u,u.exports,t,e,n,o)}return n[a].exports}for(var r="function"==typeof require&&require,a=0;a<o.length;a++)i(o[a]);return i}({1:[function(t,e,n){var o=t("matches-selector");e.exports=function(t,e,n){for(var i=n?t:t.parentNode;i&&i!==document;){if(o(i,e))return i;i=i.parentNode}}},{"matches-selector":5}],2:[function(t,e,n){function o(t,e,n,o,r){var a=i.apply(this,arguments);return t.addEventListener(n,a,r),{destroy:function(){t.removeEventListener(n,a,r)}}}function i(t,e,n,o){return function(n){n.delegateTarget=r(n.target,e,!0),n.delegateTarget&&o.call(t,n)}}var r=t("closest");e.exports=o},{closest:1}],3:[function(t,e,n){n.node=function(t){return void 0!==t&&t instanceof HTMLElement&&1===t.nodeType},n.nodeList=function(t){var e=Object.prototype.toString.call(t);return void 0!==t&&("[object NodeList]"===e||"[object HTMLCollection]"===e)&&"length"in t&&(0===t.length||n.node(t[0]))},n.string=function(t){return"string"==typeof t||t instanceof String},n.fn=function(t){var e=Object.prototype.toString.call(t);return"[object Function]"===e}},{}],4:[function(t,e,n){function o(t,e,n){if(!t&&!e&&!n)throw new Error("Missing required arguments");if(!c.string(e))throw new TypeError("Second argument must be a String");if(!c.fn(n))throw new TypeError("Third argument must be a Function");if(c.node(t))return i(t,e,n);if(c.nodeList(t))return r(t,e,n);if(c.string(t))return a(t,e,n);throw new TypeError("First argument must be a String, HTMLElement, HTMLCollection, or NodeList")}function i(t,e,n){return t.addEventListener(e,n),{destroy:function(){t.removeEventListener(e,n)}}}function r(t,e,n){return Array.prototype.forEach.call(t,function(t){t.addEventListener(e,n)}),{destroy:function(){Array.prototype.forEach.call(t,function(t){t.removeEventListener(e,n)})}}}function a(t,e,n){return s(document.body,t,e,n)}var c=t("./is"),s=t("delegate");e.exports=o},{"./is":3,delegate:2}],5:[function(t,e,n){function o(t,e){if(r)return r.call(t,e);for(var n=t.parentNode.querySelectorAll(e),o=0;o<n.length;++o)if(n[o]==t)return!0;return!1}var i=Element.prototype,r=i.matchesSelector||i.webkitMatchesSelector||i.mozMatchesSelector||i.msMatchesSelector||i.oMatchesSelector;e.exports=o},{}],6:[function(t,e,n){function o(t){var e;if("INPUT"===t.nodeName||"TEXTAREA"===t.nodeName)t.focus(),t.setSelectionRange(0,t.value.length),e=t.value;else{t.hasAttribute("contenteditable")&&t.focus();var n=window.getSelection(),o=document.createRange();o.selectNodeContents(t),n.removeAllRanges(),n.addRange(o),e=n.toString()}return e}e.exports=o},{}],7:[function(t,e,n){function o(){}o.prototype={on:function(t,e,n){var o=this.e||(this.e={});return(o[t]||(o[t]=[])).push({fn:e,ctx:n}),this},once:function(t,e,n){function o(){i.off(t,o),e.apply(n,arguments)}var i=this;return o._=e,this.on(t,o,n)},emit:function(t){var e=[].slice.call(arguments,1),n=((this.e||(this.e={}))[t]||[]).slice(),o=0,i=n.length;for(o;i>o;o++)n[o].fn.apply(n[o].ctx,e);return this},off:function(t,e){var n=this.e||(this.e={}),o=n[t],i=[];if(o&&e)for(var r=0,a=o.length;a>r;r++)o[r].fn!==e&&o[r].fn._!==e&&i.push(o[r]);return i.length?n[t]=i:delete n[t],this}},e.exports=o},{}],8:[function(e,n,o){!function(i,r){if("function"==typeof t&&t.amd)t(["module","select"],r);else if("undefined"!=typeof o)r(n,e("select"));else{var a={exports:{}};r(a,i.select),i.clipboardAction=a.exports}}(this,function(t,e){"use strict";function n(t){return t&&t.__esModule?t:{"default":t}}function o(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}var i=n(e),r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol?"symbol":typeof t},a=function(){function t(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}return function(e,n,o){return n&&t(e.prototype,n),o&&t(e,o),e}}(),c=function(){function t(e){o(this,t),this.resolveOptions(e),this.initSelection()}return t.prototype.resolveOptions=function t(){var e=arguments.length<=0||void 0===arguments[0]?{}:arguments[0];this.action=e.action,this.emitter=e.emitter,this.target=e.target,this.text=e.text,this.trigger=e.trigger,this.selectedText=""},t.prototype.initSelection=function t(){this.text?this.selectFake():this.target&&this.selectTarget()},t.prototype.selectFake=function t(){var e=this,n="rtl"==document.documentElement.getAttribute("dir");this.removeFake(),this.fakeHandlerCallback=function(){return e.removeFake()},this.fakeHandler=document.body.addEventListener("click",this.fakeHandlerCallback)||!0,this.fakeElem=document.createElement("textarea"),this.fakeElem.style.fontSize="12pt",this.fakeElem.style.border="0",this.fakeElem.style.padding="0",this.fakeElem.style.margin="0",this.fakeElem.style.position="absolute",this.fakeElem.style[n?"right":"left"]="-9999px",this.fakeElem.style.top=(window.pageYOffset||document.documentElement.scrollTop)+"px",this.fakeElem.setAttribute("readonly",""),this.fakeElem.value=this.text,document.body.appendChild(this.fakeElem),this.selectedText=(0,i.default)(this.fakeElem),this.copyText()},t.prototype.removeFake=function t(){this.fakeHandler&&(document.body.removeEventListener("click",this.fakeHandlerCallback),this.fakeHandler=null,this.fakeHandlerCallback=null),this.fakeElem&&(document.body.removeChild(this.fakeElem),this.fakeElem=null)},t.prototype.selectTarget=function t(){this.selectedText=(0,i.default)(this.target),this.copyText()},t.prototype.copyText=function t(){var e=void 0;try{e=document.execCommand(this.action)}catch(n){e=!1}this.handleResult(e)},t.prototype.handleResult=function t(e){e?this.emitter.emit("success",{action:this.action,text:this.selectedText,trigger:this.trigger,clearSelection:this.clearSelection.bind(this)}):this.emitter.emit("error",{action:this.action,trigger:this.trigger,clearSelection:this.clearSelection.bind(this)})},t.prototype.clearSelection=function t(){this.target&&this.target.blur(),window.getSelection().removeAllRanges()},t.prototype.destroy=function t(){this.removeFake()},a(t,[{key:"action",set:function t(){var e=arguments.length<=0||void 0===arguments[0]?"copy":arguments[0];if(this._action=e,"copy"!==this._action&&"cut"!==this._action)throw new Error('Invalid "action" value, use either "copy" or "cut"')},get:function t(){return this._action}},{key:"target",set:function t(e){if(void 0!==e){if(!e||"object"!==("undefined"==typeof e?"undefined":r(e))||1!==e.nodeType)throw new Error('Invalid "target" value, use a valid Element');if("copy"===this.action&&e.hasAttribute("disabled"))throw new Error('Invalid "target" attribute. Please use "readonly" instead of "disabled" attribute');if("cut"===this.action&&(e.hasAttribute("readonly")||e.hasAttribute("disabled")))throw new Error('Invalid "target" attribute. You can\'t cut text from elements with "readonly" or "disabled" attributes');this._target=e}},get:function t(){return this._target}}]),t}();t.exports=c})},{select:6}],9:[function(e,n,o){!function(i,r){if("function"==typeof t&&t.amd)t(["module","./clipboard-action","tiny-emitter","good-listener"],r);else if("undefined"!=typeof o)r(n,e("./clipboard-action"),e("tiny-emitter"),e("good-listener"));else{var a={exports:{}};r(a,i.clipboardAction,i.tinyEmitter,i.goodListener),i.clipboard=a.exports}}(this,function(t,e,n,o){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function r(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function a(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}function c(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}function s(t,e){var n="data-clipboard-"+t;if(e.hasAttribute(n))return e.getAttribute(n)}var l=i(e),u=i(n),f=i(o),d=function(t){function e(n,o){r(this,e);var i=a(this,t.call(this));return i.resolveOptions(o),i.listenClick(n),i}return c(e,t),e.prototype.resolveOptions=function t(){var e=arguments.length<=0||void 0===arguments[0]?{}:arguments[0];this.action="function"==typeof e.action?e.action:this.defaultAction,this.target="function"==typeof e.target?e.target:this.defaultTarget,this.text="function"==typeof e.text?e.text:this.defaultText},e.prototype.listenClick=function t(e){var n=this;this.listener=(0,f.default)(e,"click",function(t){return n.onClick(t)})},e.prototype.onClick=function t(e){var n=e.delegateTarget||e.currentTarget;this.clipboardAction&&(this.clipboardAction=null),this.clipboardAction=new l.default({action:this.action(n),target:this.target(n),text:this.text(n),trigger:n,emitter:this})},e.prototype.defaultAction=function t(e){return s("action",e)},e.prototype.defaultTarget=function t(e){var n=s("target",e);return n?document.querySelector(n):void 0},e.prototype.defaultText=function t(e){return s("text",e)},e.prototype.destroy=function t(){this.listener.destroy(),this.clipboardAction&&(this.clipboardAction.destroy(),this.clipboardAction=null)},e}(u.default);t.exports=d})},{"./clipboard-action":8,"good-listener":4,"tiny-emitter":7}]},{},[9])(9)});
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(9);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./krautipsum.css", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./krautipsum.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@font-face {\n  font-family: 'krautipsum';\n  src: url(" + __webpack_require__(10) + ");\n  src: url(" + __webpack_require__(10) + "#iefix) format('embedded-opentype'),\n       url(" + __webpack_require__(11) + ") format('woff2'),\n       url(" + __webpack_require__(12) + ") format('woff'),\n       url(" + __webpack_require__(13) + ") format('truetype'),\n       url(" + __webpack_require__(14) + "#krautipsum) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */\n/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */\n/*\n@media screen and (-webkit-min-device-pixel-ratio:0) {\n  @font-face {\n    font-family: 'krautipsum';\n    src: url('../font/krautipsum.svg?33512785#krautipsum') format('svg');\n  }\n}\n*/\n \n [class^=\"icon-\"]:before, [class*=\" icon-\"]:before {\n  font-family: \"krautipsum\";\n  font-style: normal;\n  font-weight: normal;\n  speak: none;\n \n  display: inline-block;\n  text-decoration: inherit;\n  width: 1em;\n  margin-right: .2em;\n  text-align: center;\n  /* opacity: .8; */\n \n  /* For safety - reset parent styles, that can break glyph codes*/\n  font-variant: normal;\n  text-transform: none;\n \n  /* fix buttons height, for twitter bootstrap */\n  line-height: 1em;\n \n  /* Animation center compensation - margins should be symmetric */\n  /* remove if not needed */\n  margin-left: .2em;\n \n  /* you can be more comfortable with increased icons size */\n  /* font-size: 120%; */\n \n  /* Font smoothing. That was taken from TWBS */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n \n  /* Uncomment for 3D effect */\n  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */\n}\n \n.icon-docs:before { content: '\\F0C5'; } /* '' */", ""]);
+
+	// exports
+
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "f20178bf49bf04cb8f0c7dca89cef0a2.eot";
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "b6bc1b9a4d146df30ce0df214a602678.woff2";
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "1add3c0a2c499fb71bc8f5065d19a0b5.woff";
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d374a91b5dce101fe4909009d9b6d0f8.ttf";
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "f68c92e16ca41e81d87f159f7543be02.svg";
 
 /***/ }
 /******/ ]);
