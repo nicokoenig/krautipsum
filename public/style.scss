@@ -79,15 +79,20 @@ body {
     font-size: .8rem;
     font-weight: 400;
     cursor: pointer;
+    transition: background .2s ease-in-out;
+    border: 1px solid transparent;
     &:before {
         padding-right: .5rem;
     }
     &:hover {
-        transition: background .2s ease-in-out;
+        background: lighten($yellow, 10%);
+    }
+    &:active {
         background: $yellow;
     }
     &:focus {
         outline: 0;
+        border: 1px solid $rose;
     }
 }
 
@@ -123,6 +128,10 @@ body {
         font-size: 1.5rem;
         font-weight: 300;
     }
+    .button__copy {
+        font-size: 1rem;
+        padding: .7rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -141,5 +150,9 @@ body {
         width: 50%;
         font-size: 2rem;
         font-weight: 300;
+    }
+    .button__copy {
+        font-size: 1.25rem;
+        padding: .9rem;
     }
 }
