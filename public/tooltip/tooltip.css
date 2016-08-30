@@ -1,0 +1,27 @@
+.tooltip {
+    position: absolute;
+    white-space: nowrap;
+    display: block;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 .5rem;
+    font-size: .8rem;
+    background: #333;
+    color: #fff;
+}
+
+.tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid #333;
+    border-top: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: -10px;
+    left: calc(50% - 10px);
+}

@@ -69,9 +69,11 @@ body {
     position: relative;
     width: 100%;
     text-align: center;
+    padding: .5rem;
 }
 
 .button__copy {
+    position: relative;
     border: 0;
     padding: .5rem;
     border-radius: 5px;
@@ -128,6 +130,9 @@ body {
         font-size: 1.5rem;
         font-weight: 300;
     }
+    .buttons__wrapper {
+        padding: 1rem;
+    }
     .button__copy {
         font-size: 1rem;
         padding: .7rem;
@@ -150,6 +155,9 @@ body {
         width: 50%;
         font-size: 2rem;
         font-weight: 300;
+    }
+    .buttons__wrapper {
+        padding: 1.5rem;
     }
     .button__copy {
         font-size: 1.25rem;
