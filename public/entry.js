@@ -15,9 +15,9 @@ var tooltip = new Tooltip('.button__copy', '', false, 2500);
 var clipboard = new Clipboard('.button__copy');
 clipboard.on('success', function(e) {
     e.clearSelection();
-    tooltip.showTooltip('Successfully copied to clipboard');
+    tooltip.showTooltip('Jawoll, copied to clipboard');
 });
 
 clipboard.on('error', function(e) {
-    tooltip.showTooltip('Oooops, something went wrong, sorry :(');
+    tooltip.showTooltip('Nein Nein Nein...\nSomething went wrong, sorry :(');
 });

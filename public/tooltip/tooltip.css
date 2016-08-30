@@ -4,9 +4,8 @@
     display: block;
     border-radius: 5px;
     box-sizing: border-box;
-    height: 2rem;
-    line-height: 2rem;
-    padding: 0 .5rem;
+    line-height: 1.5;
+    padding: .5rem;
     font-size: .8rem;
     background: #333;
     color: #fff;
