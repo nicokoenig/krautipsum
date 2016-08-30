@@ -89,6 +89,7 @@ Flegel
 Flickschusterei
 Geschmeide
 Gesinde
+Weinbrandbohne
 Haudegen
 Kastrat
 Humbug
@@ -121,3 +122,9 @@ Tausendsassa
 Steckenpferd
 Wuchtbrumme
 Falscher Hase
+Taugenichts
+Drückeberger
+Lausbub
+Schelm
+Schlawiner
+Früchtchen
