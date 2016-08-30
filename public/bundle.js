@@ -55,7 +55,7 @@
 	var Tooltip = __webpack_require__(17);
 
 	// Tooltip
-	var tooltip = new Tooltip('.button__copy', '', false, 1500);
+	var tooltip = new Tooltip('.button__copy', '', false, 2500);
 
 	// Clipboard stuff
 	var clipboard = new Clipboard('.button__copy');
