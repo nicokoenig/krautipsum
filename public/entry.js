@@ -4,6 +4,10 @@ require("./style.scss");
 require("./fontello/css/krautipsum.css");
 require("./tooltip/tooltip.css");
 
+// favicon stuff
+require("./favicon.ico");
+require("./favicon-32x32.png");
+
 // js stuff
 var Clipboard = require("clipboard/dist/clipboard.min.js");
 var Tooltip = require("./tooltip/tooltip.js");

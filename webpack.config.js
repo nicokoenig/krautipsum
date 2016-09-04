@@ -1,7 +1,7 @@
 module.exports = {
     entry: "./public/entry.js",
     output: {
-        path: __dirname + '/public/',
+        path: __dirname + '/dist/',
         filename: "bundle.js"
     },
     module: {
@@ -17,6 +17,10 @@ module.exports = {
         }, {
             test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
             loader: 'file-loader'
+        }, {
+            test: /\.(jpg|jpeg|gif|png|ico)$/,
+            exclude: /node_modules/,
+            loader: 'file-loader?name=[name].[ext]'
         }]
     }
 };
