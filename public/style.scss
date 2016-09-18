@@ -1,13 +1,8 @@
-$color1: rgba(48, 41, 47, 1);
-$color2: rgba(248, 112, 96, 1);
-$color3: rgba(232, 197, 71, 1);
-$color4: rgba(181, 194, 183, 1);
-$color5: rgba(252, 252, 252, 1);
-$dark: $color1;
-$rose: $color2;
-$yellow: $color3;
-$ashgrey: $color4;
-$white: $color5;
+$dark: rgba(48, 41, 47, 1);
+$rose: rgba(248, 112, 96, 1);
+$yellow: rgba(232, 197, 71, 1);
+$white: rgba(252, 252, 252, 1);
+$snow: #FCF7F7;
 
 * {
     box-sizing: border-box;
@@ -21,9 +16,16 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    background: $yellow;
+    background: $snow;
     color: $dark;
     font-family: 'Roboto', sans-serif;
+}
+
+.site-container {
+    background: $yellow;    
+    max-width: 1200px;
+    margin: 0 auto;
+    outline: 1px solid $rose;    
 }
 
 .header {
@@ -48,6 +50,7 @@ body {
     font-size: 1.8rem;
     color: $dark;
     border-bottom: 2px solid $rose;
+    letter-spacing: .2rem;
 }
 
 .title__secondary {
@@ -172,8 +175,7 @@ body {
         width: 50%;
         max-width: 800px;
         font-size: 1.8rem;
-        font-weight: 300;
-        line-height: 170%;
+        font-weight: 300;        
     }
     .buttons__wrapper {
         padding: 1.5rem;
