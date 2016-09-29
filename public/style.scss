@@ -22,6 +22,7 @@ body {
 }
 
 .site-container {
+    min-height: 100%;
     background: $yellow;    
     max-width: 1200px;
     margin: 0 auto;
