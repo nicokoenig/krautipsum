@@ -56,7 +56,7 @@ function krautipsum(callback) {
     let numberOfSentences = random(10, 15);
     let paragraph = '';
 
-    paragraph += getRandomGreeting() + '! ';
+    paragraph += getRandomGreeting() + ' ';
 
     for (let i = 0; i < numberOfSentences; i++) {
         paragraph += createSentence();
