@@ -10,7 +10,7 @@
     "start": "node app.js",
     "build": "rm -rf dist && webpack",
     "build-watch": "rm -rf dist && webpack --watch",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm i webpack && npm run build"
   },
   "dependencies": {
     "clipboard": "^1.5.12",
