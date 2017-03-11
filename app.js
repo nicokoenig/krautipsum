@@ -1,5 +1,5 @@
 var express = require('express');
-var krautgenerator = require('./src/krautgenerator');
+var krautipsum = require('./src/krautipsum');
 var app = express();
 var router = express.Router();
 
@@ -11,13 +11,13 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-    krautgenerator.createParagraph(function(error, paragraph) {
+    krautipsum(function(error, paragraph) {
         response.render('pages/index', { paragraph: paragraph });
     });
 });
 
 router.get('/kraut', function(req, res) {
-    krautgenerator.createParagraph(function(error, paragraph) {
+    krautipsum(function(error, paragraph) {
         res.json({ kraut: paragraph });
     });
 });
