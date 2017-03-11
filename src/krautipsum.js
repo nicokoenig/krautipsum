@@ -1,10 +1,10 @@
-var krautreader = require('./krautreader');
-var greetingsOrg = krautreader.getMeSomeKraut('./src/kraut/begruessungen.txt');
-var articlesOrg = krautreader.getMeSomeKraut('./src/kraut/artikel.txt');
-var nounsOrg = krautreader.getMeSomeKraut('./src/kraut/substantive.txt');
-var verbsOrg = krautreader.getMeSomeKraut('./src/kraut/verben.txt');
-var adjectivesOrg = krautreader.getMeSomeKraut('./src/kraut/adjektive.txt');
-var exclamationsOrg = krautreader.getMeSomeKraut('./src/kraut/ausrufe.txt');
+var kraut = require('kraut');
+var greetingsOrg = kraut.greetings.all();
+var articlesOrg = ['Der', 'Die', 'Das', 'Dem'];
+var nounsOrg = kraut.nouns.all();
+var verbsOrg = kraut.verbs.all();
+var adjectivesOrg = kraut.adjectives.all();
+var exclamationsOrg = kraut.exclamations.all();
 
 var greetings = [];
 var articles = [];
@@ -48,7 +48,7 @@ function shuffleKraut() {
     exclamations = shuffle(exclamations);
 }
 
-function createParagraph(callback) {
+function krautipsum(callback) {
 
     createKrautCopies();
     shuffleKraut();
@@ -56,7 +56,7 @@ function createParagraph(callback) {
     let numberOfSentences = random(10, 15);
     let paragraph = '';
 
-    paragraph += getRandomGreeting() + '! ';
+    paragraph += getRandomGreeting() + ' ';
 
     for (let i = 0; i < numberOfSentences; i++) {
         paragraph += createSentence();
@@ -116,4 +116,4 @@ function getRandomArticle() {
     return articles[random(0, articles.length - 1)];
 }
 
-exports.createParagraph = createParagraph;
+module.exports = krautipsum;
