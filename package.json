@@ -17,9 +17,8 @@
     "ejs": "^2.4.1",
     "express": "^4.14.0",
     "kraut": "^0.0.2",
-    "normalize.css": "^4.2.0"
-  },
-  "devDependencies": {
+    "normalize.css": "^4.2.0",
+    /* dev dependencies below, because of heroku build */
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
     "node-sass": "^3.8.0",
