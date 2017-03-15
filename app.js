@@ -27,11 +27,11 @@ router.get('/kraut', function(req, res) {
 
 // API stuff ---------------------------------------------
 router.get('/greeting', function(req, res) {
-    res.json({ noun: kraut.greetings.random() });
+    res.json({ greeting: kraut.greetings.random() });
 });
 
 router.get('/adjective', function(req, res) {
-    res.json({ noun: kraut.adjectives.random() });
+    res.json({ adjective: kraut.adjectives.random() });
 });
 
 router.get('/noun', function(req, res) {
