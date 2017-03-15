@@ -19,13 +19,17 @@ app.get('/', function(request, response) {
     });
 });
 
+// API stuff ---------------------------------------------
 router.get('/kraut', function(req, res) {
     krautipsum(function(error, paragraph) {
         res.json({ kraut: paragraph });
     });
 });
 
-// API stuff ---------------------------------------------
+router.get('/sentence', function(req, res) {
+    res.json({ sentence: kraut.ipsum.makeSentence() });
+});
+
 router.get('/greeting', function(req, res) {
     res.json({ greeting: kraut.greetings.random() });
 });
