@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nicokoenig/krautipsum.svg?branch=master)](https://travis-ci.org/nicokoenig/krautipsum)
+
 # KRAUTIPSUM 
 
 Generator for traditional german filler text.
