@@ -12,7 +12,7 @@ function krautipsum(callback) {
     paragraph += kraut.greetings.random() + ' ';
 
     for (let i = 0; i < numberOfSentences; i++) {
-        paragraph += kraut.ipsum.makeSentence();
+        paragraph += `${kraut.ipsum.makeSentence()} `;
     }
 
     paragraph += kraut.exclamations.random();

@@ -42,6 +42,10 @@ router.get('/noun', function(req, res) {
     res.json({ noun: kraut.nouns.random() });
 });
 
+router.get('/verb', function(req, res) {
+    res.json({ verb: kraut.verbs.random() });
+});
+
 // REGISTER OUR API ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use('/api', router);
