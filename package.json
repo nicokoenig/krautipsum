@@ -1,6 +1,6 @@
 {
   "name": "krautipsum",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "krautipsum, a filler text generator for traditional german words",
   "engines": {
     "node": "6.3.1"
@@ -10,7 +10,8 @@
     "start": "node app.js",
     "build": "rm -rf dist && webpack",
     "build-watch": "rm -rf dist && webpack --watch",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "test": "mocha --reporter spec"
   },
   "dependencies": {
     "clipboard": "^1.5.12",
@@ -31,5 +32,9 @@
     "kraut",
     "filler text"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
 }
