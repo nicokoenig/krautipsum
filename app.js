@@ -1,6 +1,7 @@
 var express = require('express');
 var krautipsum = require('./src/krautipsum');
 var kraut = require('kraut');
+var KrautBot = require('krautbot');
 var app = express();
 var cors = require('cors');
 var router = express.Router();
@@ -53,3 +54,7 @@ app.use('/api', router);
 app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
 });
+
+// KRAUTBOT
+const krautBot = new KrautBot();
+krautBot.start();
