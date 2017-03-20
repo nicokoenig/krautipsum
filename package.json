@@ -1,6 +1,6 @@
 {
   "name": "krautipsum",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "krautipsum, a filler text generator for traditional german words",
   "engines": {
     "node": "6.3.1"
@@ -14,6 +14,7 @@
     "test": "mocha --reporter spec"
   },
   "dependencies": {
+    "krautbot": "git+https://git@github.com/nicokoenig/krautbot.git",
     "clipboard": "^1.5.12",
     "cors": "^2.8.1",
     "css-loader": "^0.23.1",
