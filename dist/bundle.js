@@ -47,22 +47,22 @@
 	// css stuff
 	__webpack_require__(1);
 	__webpack_require__(5);
-	__webpack_require__(7);
-	__webpack_require__(14);
-
-	// favicon stuff
-	__webpack_require__(16);
+	__webpack_require__(10);
 	__webpack_require__(17);
 
+	// favicon stuff
+	__webpack_require__(19);
+	__webpack_require__(20);
+
 	// js stuff
-	var Clipboard = __webpack_require__(18);
-	var Tooltip = __webpack_require__(19);
+	var Clipboard = __webpack_require__(21);
+	var Tooltip = __webpack_require__(22);
 
 	// Tooltip
-	var tooltip = new Tooltip('.button__copy', '', false, 2500);
+	var tooltip = new Tooltip('.copy', '', false, 2500);
 
 	// Clipboard stuff
-	var clipboard = new Clipboard('.button__copy');
+	var clipboard = new Clipboard('.copy');
 	clipboard.on('success', function(e) {
 	    e.clearSelection();
 	    tooltip.showTooltip('Jawoll, copied to clipboard');
@@ -455,7 +455,7 @@
 
 
 	// module
-	exports.push([module.id, "* {\n  box-sizing: border-box; }\n\nbody, html {\n  height: 100%; }\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  background: #FCF7F7;\n  color: #30292f;\n  font-family: 'Roboto', sans-serif; }\n\n.site-container {\n  min-height: 100%;\n  background: #e8c547;\n  max-width: 1200px;\n  margin: 0 auto;\n  outline: 1px solid #f87060; }\n\n.header {\n  position: relative;\n  text-align: center;\n  background: #e8c547;\n  border-bottom: 2px solid #f87060; }\n\n.header__title-wrapper {\n  position: relative;\n  padding: .5rem .2rem;\n  display: inline-block; }\n\n.title__main {\n  position: relative;\n  padding: 0;\n  margin: 0;\n  padding-bottom: .5rem;\n  font-family: 'Bungee Shade', cursive;\n  font-size: 1.8rem;\n  color: #30292f;\n  border-bottom: 2px solid #f87060;\n  letter-spacing: .2rem; }\n\n.title__secondary {\n  position: relative;\n  color: #30292f;\n  font-weight: 400;\n  margin: 0;\n  padding: 0.5rem 0;\n  font-size: 1rem; }\n\n.content {\n  background: #fcfcfc;\n  font-size: 1.1rem;\n  font-weight: 400; }\n\n.content__wrapper {\n  padding: 1rem 1rem;\n  width: 90%;\n  line-height: 150%;\n  margin: auto; }\n\n.buttons__wrapper {\n  position: relative;\n  width: 100%;\n  text-align: center;\n  padding: .5rem; }\n\n.button__copy {\n  position: relative;\n  border: 0;\n  padding: .5rem;\n  border-radius: 5px;\n  background: #f3e2a2;\n  font-size: .8rem;\n  font-weight: 400;\n  cursor: pointer;\n  transition: background .2s ease-in-out;\n  border: 1px solid transparent; }\n  .button__copy:before {\n    padding-right: .5rem; }\n  .button__copy:hover {\n    background: #eed374; }\n  .button__copy:active {\n    background: #e8c547; }\n  .button__copy:focus {\n    outline: 0;\n    border: 1px solid #f87060; }\n\n.footer {\n  padding: 2em;\n  font-size: 0.8rem;\n  font-weight: 400;\n  background: #e8c547;\n  border-top: 2px solid #f87060;\n  text-align: center; }\n\n@media (min-width: 400px) {\n  .content__wrapper {\n    width: 80%; } }\n\n@media (min-width: 800px) {\n  .header {\n    border-bottom: 3px solid #f87060; }\n  .header__title-wrapper {\n    padding: 1rem .4rem; }\n  .title__main {\n    font-size: 2.5rem;\n    border-bottom: 3px solid #f87060; }\n  .title__secondary {\n    font-size: 1.5rem;\n    font-weight: 300; }\n  .content__wrapper {\n    width: 65%;\n    font-size: 1.5rem;\n    font-weight: 300;\n    line-height: 160%; }\n  .buttons__wrapper {\n    padding: 1rem; }\n  .button__copy {\n    font-size: 1rem;\n    padding: .7rem; }\n  .footer {\n    border-top: 3px solid #f87060; } }\n\n@media (min-width: 1200px) {\n  .header {\n    border-bottom: 4px solid #f87060; }\n  .header__title-wrapper {\n    padding: 1.5rem .8rem; }\n  .title__main {\n    font-size: 3rem;\n    border-bottom: 4px solid #f87060; }\n  .title__secondary {\n    font-size: 2rem;\n    font-weight: 300; }\n  .content__wrapper {\n    width: 50%;\n    max-width: 800px;\n    font-size: 1.8rem;\n    font-weight: 300; }\n  .buttons__wrapper {\n    padding: 1.5rem; }\n  .button__copy {\n    font-size: 1.25rem;\n    padding: .9rem; }\n  .footer {\n    border-top: 4px solid #f87060; } }\n", ""]);
+	exports.push([module.id, "/*\n\tImage Licence\n\thttps://commons.wikimedia.org/wiki/File:Die_Gartenlaube_(1859)_b_577.jpg\n*/\n* {\n  box-sizing: border-box; }\n\nbody,\nhtml {\n  height: 100%; }\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  background-color: #e8c547;\n  color: #30292f; }\n\nheader {\n  position: relative;\n  padding: 1rem;\n  font-size: 3rem;\n  background-color: #e8c547;\n  text-shadow: 1px 1px #fcfcfc; }\n\n.heading__main {\n  font-size: 2.5rem;\n  margin: 0; }\n\n.heading__secondary {\n  margin: 0;\n  font-size: 1rem; }\n\nmain {\n  background: #fcfcfc;\n  padding: 1rem;\n  padding-bottom: 1.5rem;\n  font-size: 1.1rem;\n  font-weight: 400;\n  line-height: 130%;\n  text-align: center; }\n\n.kraut {\n  text-align: left; }\n\n.kraut:first-letter {\n  font-size: 300%; }\n\n.copy {\n  position: relative;\n  border: 0;\n  padding: .5rem;\n  border-radius: 5px;\n  background-color: #f3e2a2;\n  font-size: .8rem;\n  font-weight: 400;\n  cursor: pointer;\n  transition: background-color .2s ease-in-out;\n  border: 1px solid transparent; }\n  .copy:before {\n    padding-right: .5rem; }\n  .copy:hover {\n    background-color: #eed374; }\n  .copy:active {\n    background-color: #e8c547; }\n  .copy:focus {\n    outline: 0;\n    border: 1px solid #f87060; }\n\na {\n  color: #30292f; }\n  a:hover {\n    color: #f87060; }\n\nfooter {\n  text-align: center;\n  color: #30292f;\n  padding: 1rem; }\n\n@media (min-width: 400px) {\n  header {\n    background-image: url(" + __webpack_require__(7) + ");\n    background-repeat: no-repeat;\n    background-position: center center;\n    background-size: cover;\n    padding: 0;\n    font-size: 0;\n    height: 200px;\n    box-shadow: 0 5px 5px #30292f; }\n  .heading {\n    background-color: rgba(232, 197, 71, 0.9);\n    padding: .5rem 1rem;\n    text-align: left; }\n  .heading__main {\n    font-size: 2rem;\n    margin-bottom: .25rem; }\n  .heading__secondary {\n    font-size: .75rem; }\n  .kraut {\n    margin: 2rem auto;\n    font-size: 1.2rem;\n    font-weight: 400;\n    line-height: 130%;\n    max-width: 400px; } }\n\n@media (min-width: 800px) {\n  header {\n    height: 400px;\n    background-image: url(" + __webpack_require__(8) + "); }\n  .heading {\n    padding: .5rem 1rem; }\n  .heading__main {\n    font-size: 2rem;\n    margin-bottom: .25rem; }\n  .heading__secondary {\n    font-size: .75rem; }\n  .kraut {\n    margin: 3rem auto;\n    font-size: 1.4rem;\n    font-weight: 300;\n    line-height: 130%;\n    max-width: 500px; }\n  .copy {\n    font-size: 1rem;\n    padding: .7rem; } }\n\n@media (min-width: 1200px) {\n  header {\n    height: 450px;\n    background-image: url(" + __webpack_require__(9) + "); }\n  .copy {\n    font-size: 1.25rem;\n    padding: .9rem; } }\n", ""]);
 
 	// exports
 
@@ -464,10 +464,28 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "header_small.jpg";
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "header_medium.jpg";
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "header_large.jpg";
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(8);
+	var content = __webpack_require__(11);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -487,7 +505,7 @@
 	}
 
 /***/ },
-/* 8 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -495,49 +513,24 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'krautipsum';\n  src: url(" + __webpack_require__(9) + ");\n  src: url(" + __webpack_require__(9) + "#iefix) format('embedded-opentype'),\n       url(" + __webpack_require__(10) + ") format('woff2'),\n       url(" + __webpack_require__(11) + ") format('woff'),\n       url(" + __webpack_require__(12) + ") format('truetype'),\n       url(" + __webpack_require__(13) + "#krautipsum) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */\n/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */\n/*\n@media screen and (-webkit-min-device-pixel-ratio:0) {\n  @font-face {\n    font-family: 'krautipsum';\n    src: url('../font/krautipsum.svg?33512785#krautipsum') format('svg');\n  }\n}\n*/\n \n [class^=\"icon-\"]:before, [class*=\" icon-\"]:before {\n  font-family: \"krautipsum\";\n  font-style: normal;\n  font-weight: normal;\n  speak: none;\n \n  display: inline-block;\n  text-decoration: inherit;\n  width: 1em;\n  margin-right: .2em;\n  text-align: center;\n  /* opacity: .8; */\n \n  /* For safety - reset parent styles, that can break glyph codes*/\n  font-variant: normal;\n  text-transform: none;\n \n  /* fix buttons height, for twitter bootstrap */\n  line-height: 1em;\n \n  /* Animation center compensation - margins should be symmetric */\n  /* remove if not needed */\n  margin-left: .2em;\n \n  /* you can be more comfortable with increased icons size */\n  /* font-size: 120%; */\n \n  /* Font smoothing. That was taken from TWBS */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n \n  /* Uncomment for 3D effect */\n  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */\n}\n \n.icon-docs:before { content: '\\F0C5'; } /* '' */", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'krautipsum';\n  src: url(" + __webpack_require__(23) + ");\n  src: url(" + __webpack_require__(23) + "#iefix) format('embedded-opentype'),\n       url(" + __webpack_require__(24) + ") format('woff2'),\n       url(" + __webpack_require__(25) + ") format('woff'),\n       url(" + __webpack_require__(26) + ") format('truetype'),\n       url(" + __webpack_require__(27) + "#krautipsum) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */\n/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */\n/*\n@media screen and (-webkit-min-device-pixel-ratio:0) {\n  @font-face {\n    font-family: 'krautipsum';\n    src: url('../font/krautipsum.svg?58968014#krautipsum') format('svg');\n  }\n}\n*/\n \n [class^=\"icon-\"]:before, [class*=\" icon-\"]:before {\n  font-family: \"krautipsum\";\n  font-style: normal;\n  font-weight: normal;\n  speak: none;\n \n  display: inline-block;\n  text-decoration: inherit;\n  width: 1em;\n  margin-right: .2em;\n  text-align: center;\n  /* opacity: .8; */\n \n  /* For safety - reset parent styles, that can break glyph codes*/\n  font-variant: normal;\n  text-transform: none;\n \n  /* fix buttons height, for twitter bootstrap */\n  line-height: 1em;\n \n  /* Animation center compensation - margins should be symmetric */\n  /* remove if not needed */\n  margin-left: .2em;\n \n  /* you can be more comfortable with increased icons size */\n  /* font-size: 120%; */\n \n  /* Font smoothing. That was taken from TWBS */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n \n  /* Uncomment for 3D effect */\n  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */\n}\n \n.icon-heart:before { content: '\\E800'; } /* '' */\n.icon-twitter:before { content: '\\F099'; } /* '' */\n.icon-github-circled:before { content: '\\F09B'; } /* '' */\n.icon-docs:before { content: '\\F0C5'; } /* '' */", ""]);
 
 	// exports
 
 
 /***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "f20178bf49bf04cb8f0c7dca89cef0a2.eot";
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "b6bc1b9a4d146df30ce0df214a602678.woff2";
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "1add3c0a2c499fb71bc8f5065d19a0b5.woff";
-
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d374a91b5dce101fe4909009d9b6d0f8.ttf";
-
-/***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "f68c92e16ca41e81d87f159f7543be02.svg";
-
-/***/ },
-/* 14 */
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(15);
+	var content = __webpack_require__(18);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -557,7 +550,7 @@
 	}
 
 /***/ },
-/* 15 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -565,25 +558,25 @@
 
 
 	// module
-	exports.push([module.id, ".tooltip {\n    position: absolute;\n    white-space: nowrap;\n    display: block;\n    border-radius: 5px;\n    box-sizing: border-box;\n    line-height: 1.5;\n    padding: .5rem;\n    font-size: .8rem;\n    background: #333;\n    color: #fff;\n}\n\n.tooltip:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 0;\n    height: 0;\n    border: 10px solid #333;\n    border-top: 0;\n    border-left: 10px solid transparent;\n    border-right: 10px solid transparent;\n    top: -10px;\n    left: calc(50% - 10px);\n}", ""]);
+	exports.push([module.id, ".tooltip {\n    position: absolute;\n    white-space: nowrap;\n    display: block;\n    border-radius: 5px;\n    box-sizing: border-box;\n    line-height: 1.5;\n    padding: .5rem;\n    font-size: .8rem;\n    background-color: rgba(48, 41, 47, 1);\n    color: rgba(252, 252, 252, 1);;\n}\n\n.tooltip:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 0;\n    height: 0;\n    border: 10px solid rgba(48, 41, 47, 1);\n    border-top: 0;\n    border-left: 10px solid transparent;\n    border-right: 10px solid transparent;\n    top: -10px;\n    left: calc(50% - 10px);\n}", ""]);
 
 	// exports
 
 
 /***/ },
-/* 16 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "favicon.ico";
 
 /***/ },
-/* 17 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "favicon-32x32.png";
 
 /***/ },
-/* 18 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var require;var require;/*!
@@ -595,7 +588,7 @@
 	!function(e){if(true)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var t;t="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this,t.Clipboard=e()}}(function(){var e,t,n;return function e(t,n,o){function i(a,c){if(!n[a]){if(!t[a]){var l="function"==typeof require&&require;if(!c&&l)return require(a,!0);if(r)return r(a,!0);var u=new Error("Cannot find module '"+a+"'");throw u.code="MODULE_NOT_FOUND",u}var s=n[a]={exports:{}};t[a][0].call(s.exports,function(e){var n=t[a][1][e];return i(n?n:e)},s,s.exports,e,t,n,o)}return n[a].exports}for(var r="function"==typeof require&&require,a=0;a<o.length;a++)i(o[a]);return i}({1:[function(e,t,n){function o(e,t){for(;e&&e.nodeType!==i;){if(e.matches(t))return e;e=e.parentNode}}var i=9;if("undefined"!=typeof Element&&!Element.prototype.matches){var r=Element.prototype;r.matches=r.matchesSelector||r.mozMatchesSelector||r.msMatchesSelector||r.oMatchesSelector||r.webkitMatchesSelector}t.exports=o},{}],2:[function(e,t,n){function o(e,t,n,o,r){var a=i.apply(this,arguments);return e.addEventListener(n,a,r),{destroy:function(){e.removeEventListener(n,a,r)}}}function i(e,t,n,o){return function(n){n.delegateTarget=r(n.target,t),n.delegateTarget&&o.call(e,n)}}var r=e("./closest");t.exports=o},{"./closest":1}],3:[function(e,t,n){n.node=function(e){return void 0!==e&&e instanceof HTMLElement&&1===e.nodeType},n.nodeList=function(e){var t=Object.prototype.toString.call(e);return void 0!==e&&("[object NodeList]"===t||"[object HTMLCollection]"===t)&&"length"in e&&(0===e.length||n.node(e[0]))},n.string=function(e){return"string"==typeof e||e instanceof String},n.fn=function(e){var t=Object.prototype.toString.call(e);return"[object Function]"===t}},{}],4:[function(e,t,n){function o(e,t,n){if(!e&&!t&&!n)throw new Error("Missing required arguments");if(!c.string(t))throw new TypeError("Second argument must be a String");if(!c.fn(n))throw new TypeError("Third argument must be a Function");if(c.node(e))return i(e,t,n);if(c.nodeList(e))return r(e,t,n);if(c.string(e))return a(e,t,n);throw new TypeError("First argument must be a String, HTMLElement, HTMLCollection, or NodeList")}function i(e,t,n){return e.addEventListener(t,n),{destroy:function(){e.removeEventListener(t,n)}}}function r(e,t,n){return Array.prototype.forEach.call(e,function(e){e.addEventListener(t,n)}),{destroy:function(){Array.prototype.forEach.call(e,function(e){e.removeEventListener(t,n)})}}}function a(e,t,n){return l(document.body,e,t,n)}var c=e("./is"),l=e("delegate");t.exports=o},{"./is":3,delegate:2}],5:[function(e,t,n){function o(e){var t;if("SELECT"===e.nodeName)e.focus(),t=e.value;else if("INPUT"===e.nodeName||"TEXTAREA"===e.nodeName){var n=e.hasAttribute("readonly");n||e.setAttribute("readonly",""),e.select(),e.setSelectionRange(0,e.value.length),n||e.removeAttribute("readonly"),t=e.value}else{e.hasAttribute("contenteditable")&&e.focus();var o=window.getSelection(),i=document.createRange();i.selectNodeContents(e),o.removeAllRanges(),o.addRange(i),t=o.toString()}return t}t.exports=o},{}],6:[function(e,t,n){function o(){}o.prototype={on:function(e,t,n){var o=this.e||(this.e={});return(o[e]||(o[e]=[])).push({fn:t,ctx:n}),this},once:function(e,t,n){function o(){i.off(e,o),t.apply(n,arguments)}var i=this;return o._=t,this.on(e,o,n)},emit:function(e){var t=[].slice.call(arguments,1),n=((this.e||(this.e={}))[e]||[]).slice(),o=0,i=n.length;for(o;o<i;o++)n[o].fn.apply(n[o].ctx,t);return this},off:function(e,t){var n=this.e||(this.e={}),o=n[e],i=[];if(o&&t)for(var r=0,a=o.length;r<a;r++)o[r].fn!==t&&o[r].fn._!==t&&i.push(o[r]);return i.length?n[e]=i:delete n[e],this}},t.exports=o},{}],7:[function(t,n,o){!function(i,r){if("function"==typeof e&&e.amd)e(["module","select"],r);else if("undefined"!=typeof o)r(n,t("select"));else{var a={exports:{}};r(a,i.select),i.clipboardAction=a.exports}}(this,function(e,t){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var i=n(t),r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},a=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),c=function(){function e(t){o(this,e),this.resolveOptions(t),this.initSelection()}return a(e,[{key:"resolveOptions",value:function e(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};this.action=t.action,this.emitter=t.emitter,this.target=t.target,this.text=t.text,this.trigger=t.trigger,this.selectedText=""}},{key:"initSelection",value:function e(){this.text?this.selectFake():this.target&&this.selectTarget()}},{key:"selectFake",value:function e(){var t=this,n="rtl"==document.documentElement.getAttribute("dir");this.removeFake(),this.fakeHandlerCallback=function(){return t.removeFake()},this.fakeHandler=document.body.addEventListener("click",this.fakeHandlerCallback)||!0,this.fakeElem=document.createElement("textarea"),this.fakeElem.style.fontSize="12pt",this.fakeElem.style.border="0",this.fakeElem.style.padding="0",this.fakeElem.style.margin="0",this.fakeElem.style.position="absolute",this.fakeElem.style[n?"right":"left"]="-9999px";var o=window.pageYOffset||document.documentElement.scrollTop;this.fakeElem.style.top=o+"px",this.fakeElem.setAttribute("readonly",""),this.fakeElem.value=this.text,document.body.appendChild(this.fakeElem),this.selectedText=(0,i.default)(this.fakeElem),this.copyText()}},{key:"removeFake",value:function e(){this.fakeHandler&&(document.body.removeEventListener("click",this.fakeHandlerCallback),this.fakeHandler=null,this.fakeHandlerCallback=null),this.fakeElem&&(document.body.removeChild(this.fakeElem),this.fakeElem=null)}},{key:"selectTarget",value:function e(){this.selectedText=(0,i.default)(this.target),this.copyText()}},{key:"copyText",value:function e(){var t=void 0;try{t=document.execCommand(this.action)}catch(e){t=!1}this.handleResult(t)}},{key:"handleResult",value:function e(t){this.emitter.emit(t?"success":"error",{action:this.action,text:this.selectedText,trigger:this.trigger,clearSelection:this.clearSelection.bind(this)})}},{key:"clearSelection",value:function e(){this.target&&this.target.blur(),window.getSelection().removeAllRanges()}},{key:"destroy",value:function e(){this.removeFake()}},{key:"action",set:function e(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"copy";if(this._action=t,"copy"!==this._action&&"cut"!==this._action)throw new Error('Invalid "action" value, use either "copy" or "cut"')},get:function e(){return this._action}},{key:"target",set:function e(t){if(void 0!==t){if(!t||"object"!==("undefined"==typeof t?"undefined":r(t))||1!==t.nodeType)throw new Error('Invalid "target" value, use a valid Element');if("copy"===this.action&&t.hasAttribute("disabled"))throw new Error('Invalid "target" attribute. Please use "readonly" instead of "disabled" attribute');if("cut"===this.action&&(t.hasAttribute("readonly")||t.hasAttribute("disabled")))throw new Error('Invalid "target" attribute. You can\'t cut text from elements with "readonly" or "disabled" attributes');this._target=t}},get:function e(){return this._target}}]),e}();e.exports=c})},{select:5}],8:[function(t,n,o){!function(i,r){if("function"==typeof e&&e.amd)e(["module","./clipboard-action","tiny-emitter","good-listener"],r);else if("undefined"!=typeof o)r(n,t("./clipboard-action"),t("tiny-emitter"),t("good-listener"));else{var a={exports:{}};r(a,i.clipboardAction,i.tinyEmitter,i.goodListener),i.clipboard=a.exports}}(this,function(e,t,n,o){"use strict";function i(e){return e&&e.__esModule?e:{default:e}}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function a(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function c(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}function l(e,t){var n="data-clipboard-"+e;if(t.hasAttribute(n))return t.getAttribute(n)}var u=i(t),s=i(n),f=i(o),d=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),h=function(e){function t(e,n){r(this,t);var o=a(this,(t.__proto__||Object.getPrototypeOf(t)).call(this));return o.resolveOptions(n),o.listenClick(e),o}return c(t,e),d(t,[{key:"resolveOptions",value:function e(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};this.action="function"==typeof t.action?t.action:this.defaultAction,this.target="function"==typeof t.target?t.target:this.defaultTarget,this.text="function"==typeof t.text?t.text:this.defaultText}},{key:"listenClick",value:function e(t){var n=this;this.listener=(0,f.default)(t,"click",function(e){return n.onClick(e)})}},{key:"onClick",value:function e(t){var n=t.delegateTarget||t.currentTarget;this.clipboardAction&&(this.clipboardAction=null),this.clipboardAction=new u.default({action:this.action(n),target:this.target(n),text:this.text(n),trigger:n,emitter:this})}},{key:"defaultAction",value:function e(t){return l("action",t)}},{key:"defaultTarget",value:function e(t){var n=l("target",t);if(n)return document.querySelector(n)}},{key:"defaultText",value:function e(t){return l("text",t)}},{key:"destroy",value:function e(){this.listener.destroy(),this.clipboardAction&&(this.clipboardAction.destroy(),this.clipboardAction=null)}}],[{key:"isSupported",value:function e(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:["copy","cut"],n="string"==typeof t?[t]:t,o=!!document.queryCommandSupported;return n.forEach(function(e){o=o&&!!document.queryCommandSupported(e)}),o}}]),t}(s.default);e.exports=h})},{"./clipboard-action":7,"good-listener":4,"tiny-emitter":6}]},{},[8])(8)});
 
 /***/ },
-/* 19 */
+/* 22 */
 /***/ function(module, exports) {
 
 	// Just a little tooltip made by myself
@@ -651,6 +644,36 @@
 	};
 
 	module.exports = Tooltip;
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "7d76db58a96a2d7a3115701db0a3c958.eot";
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "5b0def09d1127a9ff621aa45ec61fb1f.woff2";
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a3ac88d4f1bdf8625e1cfa61ac93a2fd.woff";
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "66e9a41a5e432f7183d8abafb8fe75c7.ttf";
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d7b17da25df8bf2c515e9b6408e0d4ca.svg";
 
 /***/ }
 /******/ ]);
