@@ -1,3 +1,8 @@
+/*
+	Image Licence
+	https://commons.wikimedia.org/wiki/File:Die_Gartenlaube_(1859)_b_577.jpg
+*/
+
 $dark: rgba(48, 41, 47, 1);
 $rose: rgba(248, 112, 96, 1);
 $yellow: rgba(232, 197, 71, 1);
@@ -5,187 +10,164 @@ $white: rgba(252, 252, 252, 1);
 $snow: #FCF7F7;
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
+body,
+html {
+	height: 100%;
 }
 
-body {    
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    background: $snow;
-    color: $dark;
-    font-family: 'Roboto', sans-serif;
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: $yellow;
+	color: $dark;
 }
 
-.site-container {
-    min-height: 100%;
-    background: $yellow;    
-    max-width: 1200px;
-    margin: 0 auto;
-    outline: 1px solid $rose;    
+header {
+	position: relative;
+	padding: 1rem;
+	font-size: 3rem;
+	background-color: $yellow;
+	text-shadow: 1px 1px $white;
 }
 
-.header {
-    position: relative;
-    text-align: center;
-    background: $yellow;
-    border-bottom: 2px solid $rose;
+.heading__main {
+	font-size: 2.5rem;
+	margin: 0;
 }
 
-.header__title-wrapper {
-    position: relative;
-    padding: .5rem .2rem;
-    display: inline-block;
+.heading__secondary {
+	margin: 0;
+	font-size: 1rem;
 }
 
-.title__main {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    padding-bottom: .5rem;
-    font-family: 'Bungee Shade', cursive;
-    font-size: 1.8rem;
-    color: $dark;
-    border-bottom: 2px solid $rose;
-    letter-spacing: .2rem;
+main {
+	background: $white;
+	padding: 1rem;
+	padding-bottom: 1.5rem;
+	font-size: 1.1rem;
+	font-weight: 400;
+	line-height: 130%;
+	text-align: center;
 }
 
-.title__secondary {
-    position: relative;
-    color: $dark;
-    font-weight: 400;
-    margin: 0;
-    padding: 0.5rem 0;
-    font-size: 1rem;
+.kraut {
+	text-align: left;
 }
 
-.content {
-    background: $white;
-    font-size: 1.1rem;
-    font-weight: 400;
+.kraut:first-letter {
+	font-size: 300%;
 }
 
-.content__wrapper {
-    padding: 1rem 1rem;
-    width: 90%;
-    line-height: 150%;
-    margin: auto;
+.copy {
+	position: relative;
+	border: 0;
+	padding: .5rem;
+	border-radius: 5px;
+	background-color: lighten($yellow, 20%);
+	font-size: .8rem;
+	font-weight: 400;
+	cursor: pointer;
+	transition: background-color .2s ease-in-out;
+	border: 1px solid transparent;
+	&:before {
+		padding-right: .5rem;
+	}
+	&:hover {
+		background-color: lighten($yellow, 10%);
+	}
+	&:active {
+		background-color: $yellow;
+	}
+	&:focus {
+		outline: 0;
+		border: 1px solid $rose;
+	}
 }
 
-.buttons__wrapper {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    padding: .5rem;
+a {
+	color: $dark;
+
+	&:hover {
+		color: $rose;
+	}
 }
 
-.button__copy {
-    position: relative;
-    border: 0;
-    padding: .5rem;
-    border-radius: 5px;
-    background: lighten($yellow, 20%);
-    font-size: .8rem;
-    font-weight: 400;
-    cursor: pointer;
-    transition: background .2s ease-in-out;
-    border: 1px solid transparent;
-    &:before {
-        padding-right: .5rem;
-    }
-    &:hover {
-        background: lighten($yellow, 10%);
-    }
-    &:active {
-        background: $yellow;
-    }
-    &:focus {
-        outline: 0;
-        border: 1px solid $rose;
-    }
-}
-
-.footer {
-    padding: 2em;
-    font-size: 0.8rem;
-    font-weight: 400;
-    background: $yellow;
-    border-top: 2px solid $rose;
-    text-align: center;
+footer {
+	text-align: center;
+	color: $dark;
+	padding: 1rem;
 }
 
 @media (min-width: 400px) {
-    .content__wrapper {
-        width: 80%;            
-    }
+	header {
+		background-image: url('header_small.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		padding: 0;
+		font-size: 0;
+		height: 200px;
+		box-shadow: 0 5px 5px $dark;
+	}
+	.heading {
+		background-color: rgba($yellow, .9);
+		padding: .5rem 1rem;
+		text-align: left;
+	}
+	.heading__main {
+		font-size: 2rem;
+		margin-bottom: .25rem;
+	}
+	.heading__secondary {
+		font-size: .75rem;
+	}
+	.kraut {
+		margin: 2rem auto;
+		font-size: 1.2rem;
+		font-weight: 400;
+		line-height: 130%;
+		max-width: 400px;
+	}
 }
 
 @media (min-width: 800px) {
-    .header {
-        border-bottom: 3px solid $rose;
-    }    
-    .header__title-wrapper {
-        padding: 1rem .4rem;
-    }
-    .title__main {
-        font-size: 2.5rem;
-        border-bottom: 3px solid $rose;
-    }
-    .title__secondary {
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
-    .content__wrapper {
-        width: 65%;
-        font-size: 1.5rem;
-        font-weight: 300;
-        line-height: 160%;
-    }
-    .buttons__wrapper {
-        padding: 1rem;
-    }
-    .button__copy {
-        font-size: 1rem;
-        padding: .7rem;
-    }
-    .footer {
-        border-top: 3px solid $rose;
-    }
+	header {
+		height: 400px;
+        background-image: url('header_medium.jpg');
+	}
+	.heading {
+		padding: .5rem 1rem;
+	}
+	.heading__main {
+		font-size: 2rem;
+		margin-bottom: .25rem;
+	}
+	.heading__secondary {
+		font-size: .75rem;
+	}
+	.kraut {
+		margin: 3rem auto;
+		font-size: 1.4rem;
+		font-weight: 300;
+		line-height: 130%;
+		max-width: 500px;
+	}
+	.copy {
+		font-size: 1rem;
+		padding: .7rem;
+	}
 }
 
 @media (min-width: 1200px) {
-    .header {
-        border-bottom: 4px solid $rose;
-    }
-    .header__title-wrapper {
-        padding: 1.5rem .8rem;
-    }
-    .title__main {
-        font-size: 3rem;
-        border-bottom: 4px solid $rose;
-    }
-    .title__secondary {
-        font-size: 2rem;
-        font-weight: 300;
-    }
-    .content__wrapper {
-        width: 50%;
-        max-width: 800px;
-        font-size: 1.8rem;
-        font-weight: 300;        
-    }
-    .buttons__wrapper {
-        padding: 1.5rem;
-    }
-    .button__copy {
-        font-size: 1.25rem;
-        padding: .9rem;
-    }
-    .footer {
-        border-top: 4px solid $rose;
-    }
+	header {
+		height: 450px;
+        background-image: url('header_large.jpg');
+	}
+
+	.copy {
+		font-size: 1.25rem;
+		padding: .9rem;
+	}
 }

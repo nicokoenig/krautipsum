@@ -7,8 +7,8 @@
     line-height: 1.5;
     padding: .5rem;
     font-size: .8rem;
-    background: #333;
-    color: #fff;
+    background-color: rgba(48, 41, 47, 1);
+    color: rgba(252, 252, 252, 1);;
 }
 
 .tooltip:before {
@@ -17,7 +17,7 @@
     position: absolute;
     width: 0;
     height: 0;
-    border: 10px solid #333;
+    border: 10px solid rgba(48, 41, 47, 1);
     border-top: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;

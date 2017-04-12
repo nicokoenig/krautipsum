@@ -1,35 +1,37 @@
 <html>
+
 <head>
     <title>With kraut please - traditional german filler text</title>
-    <meta name="description" content="Bored of lorem ipsum? Create a unique filler text with the beauty of traditional german words. Bring kraut and autobahn into your mock up." />
+    <meta name="description" content="Bored of lorem ipsum? Create a unique filler text with the beauty of traditional german words. Bring kraut and autobahn into your mock up."
+    />
     <meta name="google-site-verification" content="tlO36yTdpaOkBizSkrwCFrs8WLjQai-gzdTXg6mF9ys" />
     <meta name="google-site-verification" content="yrBp9tqRw376AUXbXZ608K7jIkSO-484FYMsz9jaccQ" />
     <meta name="google" content="notranslate" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Roboto:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 </head>
+
 <body>
-    <div class="site-container">
-        <header class="header">
-            <div class="header__title-wrapper">
-                <h1 class="title__main">Krautipsum</h1>
-                <h2 class="title__secondary">traditional german filler text</h2>
-            </div>
-        </header>
-        <main id="content" class="content">
-            <div class="content__wrapper">
-                <!--googleoff: all-->
-                <p id="kraut"><%= paragraph %></p>            
-                <!--googleon: all-->
-                <div class="buttons__wrapper">
-                    <button class="button__copy icon-docs" data-clipboard-target="#kraut" data-clipboard-action="copy">Copy to clipboard</button>
-                </div>            
-            </div>
-        </main>
-        <footer class="footer">With kraut please - traditional german filler text</footer>
-    </div>
+    <header>
+        <div class="heading">
+            <h1 class="heading__main">krautipsum</h1>
+            <h2 class="heading__secondary">traditional german filler text</h2>
+        </div>
+    </header>
+    <main>
+        <!--googleoff: all-->
+        <p class="kraut" id="kraut">
+            <%= paragraph %>
+        </p>
+        <!--googleon: all-->
+        <button class="copy icon-docs" data-clipboard-target="#kraut" data-clipboard-action="copy">Copy to clipboard</button>
+    </main>
+    <footer>
+        made with <i class="icon-heart"></i> on <a href="https://github.com/nicokoenig/krautipsum" target="_blank"><i class="icon-github-circled"></i></a>        by <a href="https://twitter.com/theNicoKoenig" target="_blank">nico</a>
+    </footer>
     <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
 </body>
+
 </html>
