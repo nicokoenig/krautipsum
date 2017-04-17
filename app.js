@@ -1,4 +1,5 @@
 var express = require('express');
+var compression = require('compression')
 var krautipsum = require('./src/krautipsum');
 var kraut = require('kraut');
 var KrautBot = require('krautbot');
@@ -6,8 +7,10 @@ var app = express();
 var cors = require('cors');
 var router = express.Router();
 
+
 app.set('port', (process.env.PORT || 5000));
 
+app.use(compression());
 app.use(express.static(__dirname + '/dist'));
 app.use(cors());
 

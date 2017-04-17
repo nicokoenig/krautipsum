@@ -1,6 +1,6 @@
 {
   "name": "krautipsum",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "krautipsum, a filler text generator for traditional german words",
   "engines": {
     "node": "6.3.1"
@@ -14,19 +14,23 @@
     "test": "mocha --reporter spec"
   },
   "dependencies": {
-    "krautbot": "git+https://git@github.com/nicokoenig/krautbot.git",
     "clipboard": "^1.5.12",
+    "compression": "^1.6.2",
     "cors": "^2.8.1",
     "css-loader": "^0.23.1",
     "ejs": "^2.4.1",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
+    "image-webpack-loader": "^3.3.0",
     "kraut": "^0.1.0",
+    "krautbot": "git+https://git@github.com/nicokoenig/krautbot.git",
     "node-sass": "^3.8.0",
     "normalize.css": "^4.2.0",
     "raw-loader": "^0.5.1",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
+    "uglify-js": "^2.8.22",
+    "uglifyjs-webpack-plugin": "^0.4.3",
     "webpack": "^1.13.1"
   },
   "keywords": [
