@@ -1,3 +1,5 @@
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = {
     entry: "./public/entry.js",
     output: {
@@ -20,7 +22,18 @@ module.exports = {
         }, {
             test: /\.(jpg|jpeg|gif|png|ico)$/,
             exclude: /node_modules/,
-            loader: 'file-loader?name=[name].[ext]'
+            loaders: [
+                'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+                'image-webpack-loader'
+            ]
         }]
-    }
+    },
+    imageWebpackLoader: {
+        optipng: {
+            optimizationLevel: 7
+        }
+    },
+    plugins: [
+        new UglifyJSPlugin()
+    ]
 };
