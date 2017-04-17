@@ -1,6 +1,6 @@
 {
   "name": "krautipsum",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "krautipsum, a filler text generator for traditional german words",
   "engines": {
     "node": "6.3.1"
