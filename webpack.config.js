@@ -31,7 +31,7 @@ module.exports = {
             test: /\.(jpg|jpeg|gif|png|ico)$/,
             exclude: /node_modules/,
             use: [
-                { loader: "file-loader" },
+                { loader: "file-loader?name=[name].[ext]" },
                 {
                     loader: "image-webpack-loader",
                     query: {
