@@ -1,39 +1,50 @@
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: "./public/entry.js",
     output: {
-        path: __dirname + '/dist/',
+        path: __dirname + "/dist/",
         filename: "bundle.js"
     },
     module: {
-        loaders: [{
+        rules: [{
             test: /\.css$/,
-            loader: "style!css"
+            use: ExtractTextPlugin.extract({
+                use: "css-loader"
+            })
         }, {
             test: /\.scss$/,
-            loaders: ["style", "css", "sass"]
+            use: ExtractTextPlugin.extract({
+                use: [
+                    { loader: "css-loader" },
+                    { loader: "sass-loader" }
+                ]
+            })
         }, {
             test: /\.html$/,
-            loader: "raw-loader"
+            use: "raw-loader"
         }, {
             test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-            loader: 'file-loader'
+            use: "file-loader"
         }, {
             test: /\.(jpg|jpeg|gif|png|ico)$/,
             exclude: /node_modules/,
-            loaders: [
-                'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-                'image-webpack-loader'
+            use: [
+                { loader: "file-loader" },
+                {
+                    loader: "image-webpack-loader",
+                    query: {
+                        optipng: {
+                            optimizationLevel: 7
+                        }
+                    }
+                }
             ]
         }]
     },
-    imageWebpackLoader: {
-        optipng: {
-            optimizationLevel: 7
-        }
-    },
     plugins: [
+        new ExtractTextPlugin("styles.ejs"),
         new UglifyJSPlugin()
     ]
 };
