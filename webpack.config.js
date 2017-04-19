@@ -1,5 +1,6 @@
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     entry: "./public/entry.js",
@@ -45,6 +46,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin("styles.ejs"),
+        new OptimizeCssAssetsPlugin({ assetNameRegExp: /styles\.ejs/g, }),
         new UglifyJSPlugin()
     ]
 };
