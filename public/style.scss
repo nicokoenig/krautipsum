@@ -1,59 +1,86 @@
-/*
-	Image Licence
-	https://commons.wikimedia.org/wiki/File:Die_Gartenlaube_(1859)_b_577.jpg
-*/
-
 $dark: rgba(48, 41, 47, 1);
 $rose: rgba(248, 112, 96, 1);
 $yellow: rgba(232, 197, 71, 1);
 $white: rgba(252, 252, 252, 1);
-$snow: #FCF7F7;
 
 * {
 	box-sizing: border-box;
 }
 
-body,
-html {
+html,
+body {
 	height: 100%;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
 	background-color: $yellow;
-	color: $dark;
 }
 
-header {
-	position: relative;
-	padding: 1rem;
-	font-size: 3rem;
+.header {
+	text-align: center;
+	background-color: $dark;
+}
+
+.header__bottom {
+	display: none;
+	height: 20px;
 	background-color: $yellow;
-	text-shadow: 1px 1px $white;
+	clip-path: polygon(0% 0%, 50% 100%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
 }
 
-.heading__main {
-	font-size: 2.5rem;
-	margin: 0;
+.title {
+	padding-top: 1rem;
+	color: $white;
+	text-align: center;
+	background: $dark;
 }
 
-.heading__secondary {
-	margin: 0;
+.title__top {
+	display: none;
+	font-family: 'Share';
+	text-align: center;
+	padding: 0 10px 10px 10px;
+	border-bottom: 2px solid $yellow;
+	letter-spacing: 5px;
 	font-size: 1rem;
+	background-color: $dark;
+	font-weight: normal;
+}
+
+.title__main {
+	font-family: 'Lobster';
+	font-size: 2.5rem;
+	padding-bottom: 1rem;
+	text-shadow: 2px 2px $rose;
+	margin: 0;
+	font-weight: normal;
+}
+
+.title__bottom {
+	display: none;
+	font-family: 'Share';
+	letter-spacing: 5px;
+	border-top: 2px solid $yellow;
+	padding: 10px 10px 0 10px;
+	font-size: 1rem;
+	font-weight: normal;
 }
 
 main {
-	background: $white;
-	padding: 1rem;
-	padding-bottom: 1.5rem;
-	font-size: 1.1rem;
-	font-weight: 400;
-	line-height: 130%;
 	text-align: center;
+	margin-bottom: 2rem;
 }
 
 .kraut {
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.2rem;
 	text-align: left;
+	color: $dark;
+	max-width: 400px;
+	margin: 1rem auto;
+	padding: 1rem;
 }
 
 .kraut:first-letter {
@@ -65,109 +92,77 @@ main {
 	border: 0;
 	padding: .5rem;
 	border-radius: 5px;
-	background-color: lighten($yellow, 20%);
-	font-size: .8rem;
+	background: $dark;
+	color: $white;
+	font-family: 'Roboto';
+	font-size: 1rem;
 	font-weight: 400;
 	cursor: pointer;
-	transition: background-color .2s ease-in-out;
+	transition: background .2s ease-in-out;
 	border: 1px solid transparent;
 	&:before {
 		padding-right: .5rem;
 	}
 	&:hover {
-		background-color: lighten($yellow, 10%);
+		background: lighten($dark, 10%);
+		box-shadow: 2px 2px $rose;
 	}
 	&:active {
-		background-color: $yellow;
+		background: $yellow;
 	}
 	&:focus {
 		outline: 0;
-		border: 1px solid $rose;
 	}
-}
-
-a {
-	color: $dark;
-
-	&:hover {
-		color: $rose;
-	}
-}
-
-footer {
-	text-align: center;
-	color: $dark;
-	padding: 1rem;
 }
 
 @media (min-width: 400px) {
-	header {
-		background-image: url('header_small.jpg');
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
-		padding: 0;
-		font-size: 0;
-		height: 200px;
-		box-shadow: 0 5px 5px $dark;
+	.title__main {
+		font-size: 3.5rem;
+		padding-bottom: .5rem;
 	}
-	.heading {
-		background-color: rgba($yellow, .9);
-		padding: .5rem 1rem;
-		text-align: left;
+	.title__bottom {
+		display: inline-block;
 	}
-	.heading__main {
-		font-size: 2rem;
-		margin-bottom: .25rem;
+	.header__bottom {
+		display: block;
 	}
-	.heading__secondary {
-		font-size: .75rem;
+	main {
+		margin-bottom: 3rem;
 	}
 	.kraut {
-		margin: 2rem auto;
+		font-size: 1.5rem;
+		line-height: 1.7rem;
+		font-weight: 300;
+	}
+	.copy {
 		font-size: 1.2rem;
-		font-weight: 400;
-		line-height: 130%;
-		max-width: 400px;
+		font-weight: 300;
+		padding: .8rem;
 	}
 }
 
 @media (min-width: 800px) {
-	header {
-		height: 400px;
-        background-image: url('header_medium.jpg');
+	.title__top {
+		display: inline-block;
 	}
-	.heading {
-		padding: .5rem 1rem;
+	.title__main {
+		font-size: 6rem;
+		padding-bottom: 1rem;
 	}
-	.heading__main {
-		font-size: 2rem;
-		margin-bottom: .25rem;
+	.header__bottom {
+		height: 40px;
 	}
-	.heading__secondary {
-		font-size: .75rem;
+	main {
+		margin-bottom: 4rem;
 	}
 	.kraut {
-		margin: 3rem auto;
+		max-width: 550px;
+		margin: 2rem auto;
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+	}
+	.copy {
 		font-size: 1.4rem;
-		font-weight: 300;
-		line-height: 130%;
-		max-width: 500px;
-	}
-	.copy {
-		font-size: 1rem;
-		padding: .7rem;
-	}
-}
-
-@media (min-width: 1200px) {
-	header {
-		height: 450px;
-        background-image: url('header_large.jpg');
-	}
-
-	.copy {
-		font-size: 1.25rem;
-		padding: .9rem;
+		padding: 1rem;
 	}
 }
