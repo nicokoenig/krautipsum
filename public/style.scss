@@ -19,6 +19,7 @@ body {
 .header {
 	text-align: center;
 	background-color: $dark;
+	color: $white;
 }
 
 .header__bottom {
@@ -30,21 +31,25 @@ body {
 
 .title {
 	padding-top: 1rem;
-	color: $white;
 	text-align: center;
-	background: $dark;
+	font-weight: normal;
 }
 
 .title__top {
 	display: none;
 	font-family: 'Share';
-	text-align: center;
 	padding: 0 10px 10px 10px;
 	border-bottom: 2px solid $yellow;
 	letter-spacing: 5px;
 	font-size: 1rem;
-	background-color: $dark;
-	font-weight: normal;
+
+	&:before {
+		content: '\00b7\00a0';
+	}
+
+	&:after {
+		content: '\00a0\00b7';
+	}
 }
 
 .title__main {
@@ -53,7 +58,6 @@ body {
 	padding-bottom: 1rem;
 	text-shadow: 2px 2px $rose;
 	margin: 0;
-	font-weight: normal;
 }
 
 .title__bottom {
@@ -63,7 +67,6 @@ body {
 	border-top: 2px solid $yellow;
 	padding: 10px 10px 0 10px;
 	font-size: 1rem;
-	font-weight: normal;
 }
 
 main {
@@ -89,10 +92,9 @@ main {
 
 .copy {
 	position: relative;
-	border: 0;
 	padding: .5rem;
 	border-radius: 5px;
-	background: $dark;
+	background-color: $dark;
 	color: $white;
 	font-family: 'Roboto';
 	font-size: 1rem;
@@ -104,11 +106,11 @@ main {
 		padding-right: .5rem;
 	}
 	&:hover {
-		background: lighten($dark, 10%);
+		background-color: lighten($dark, 10%);
 		box-shadow: 2px 2px $rose;
 	}
 	&:active {
-		background: $yellow;
+		background-color: $yellow;
 	}
 	&:focus {
 		outline: 0;
