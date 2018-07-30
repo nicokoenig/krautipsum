@@ -2,205 +2,192 @@ $dark: rgba(48, 41, 47, 1);
 $rose: rgba(248, 112, 96, 1);
 $yellow: rgba(232, 197, 71, 1);
 $white: rgba(252, 252, 252, 1);
-$clip-path-header-and-footer: polygon(0% 0%, 50% 100%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	background-color: $dark;
+  background-color: $dark;
 }
 
 .header {
-	text-align: center;
-	background-color: $dark;
-	color: $white;
+  text-align: center;
+  background-color: $dark;
+  color: $white;
 }
 
 .header__bottom {
-	display: none;
-	height: 20px;
-	background-color: $yellow;
-	clip-path: $clip-path-header-and-footer;
-	clip-path: url(#clip-path-header-and-footer);
+  width: 100%;
+  height: 20px;
+  background-color: $yellow;
+}
+
+.svg-arrow polygon {
+  fill: $dark;
 }
 
 .title {
-	padding-top: 1rem;
-	text-align: center;
-	font-weight: normal;
+  padding-top: 1rem;
+  text-align: center;
+  font-weight: normal;
 }
 
 .title__top {
-	display: none;
-	font-family: 'Share';
-	padding: 0 10px 10px 10px;
-	border-bottom: 2px solid $yellow;
-	letter-spacing: 5px;
-	font-size: 1rem;
+  display: none;
+  font-family: "Share";
+  padding: 0 10px 10px 10px;
+  border-bottom: 2px solid $yellow;
+  letter-spacing: 5px;
+  font-size: 1rem;
 
-	&:before {
-		content: '\00b7\00a0';
-	}
+  &:before {
+    content: "\00b7\00a0";
+  }
 
-	&:after {
-		content: '\00a0\00b7';
-	}
+  &:after {
+    content: "\00a0\00b7";
+  }
 }
 
 .title__main {
-	font-family: 'Lobster';
-	font-size: 2.5rem;
-	padding-bottom: 1rem;
-	text-shadow: 2px 2px $rose;
-	margin: 0;
+  font-family: "Lobster";
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-shadow: 2px 2px $rose;
+  margin: 0;
 }
 
 .title__bottom {
-	display: none;
-	font-family: 'Share';
-	letter-spacing: 5px;
-	border-top: 2px solid $yellow;
-	padding: 10px 10px 0 10px;
-	font-size: 1rem;
+  display: none;
+  font-family: "Share";
+  letter-spacing: 5px;
+  border-top: 2px solid $yellow;
+  padding: 10px 10px 0 10px;
+  font-size: 1rem;
 }
 
 .main {
-	text-align: center;
-	padding-bottom: 2rem;
-	background-color: $yellow;
+  text-align: center;
+  padding-bottom: 2rem;
+  background-color: $yellow;
 }
 
 .kraut {
-	font-family: 'Roboto';
-	font-weight: 400;
-	font-size: 1rem;
-	line-height: 1.2rem;
-	text-align: left;
-	color: $dark;
-	max-width: 400px;
-	margin: 0 auto;
-	padding: 2rem 1rem;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: left;
+  color: $dark;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 .kraut:first-letter {
-	font-size: 300%;
+  font-size: 300%;
 }
 
 .copy {
-	position: relative;
-	padding: .5rem;
-	border-radius: 5px;
-	background-color: $dark;
-	color: $white;
-	font-family: 'Roboto';
-	font-size: 1rem;
-	font-weight: 400;
-	cursor: pointer;
-	transition: background .2s ease-in-out;
-	border: 1px solid transparent;
-	&:before {
-		padding-right: .5rem;
-	}
-	&:hover {
-		background-color: lighten($dark, 10%);
-		box-shadow: 2px 2px $rose;
-	}
-	&:active {
-		background-color: $yellow;
-	}
-	&:focus {
-		outline: 0;
-	}
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: $dark;
+  color: $white;
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  border: 1px solid transparent;
+  &:before {
+    padding-right: 0.5rem;
+  }
+  &:hover {
+    background-color: lighten($dark, 10%);
+    box-shadow: 2px 2px $rose;
+  }
+  &:active {
+    background-color: $yellow;
+  }
+  &:focus {
+    outline: 0;
+  }
 }
 
-.footer	{
-	background-color: $yellow;
-	color: $white;
-	font-family: 'Share';
-}
-
-.footer__decorator {
-	display: none;
-	height: 20px;
-	background-color: $dark;
-	clip-path: $clip-path-header-and-footer;
-	clip-path: url(#clip-path-header-and-footer);
+.footer {
+  background-color: $yellow;
+  color: $white;
+  font-family: "Share";
 }
 
 .footer__text {
-	background-color: $dark;
-	text-align: center;
-	padding: 1rem;
+  background-color: $dark;
+  text-align: center;
+  padding: 1rem;
 }
 
 .footer__link {
-	color: $white;
-	
-	&:hover {
-		color: $rose;
-	}
+  color: $white;
+
+  &:hover {
+    color: $rose;
+  }
 }
 
 @media (min-width: 400px) {
-	.title__main {
-		font-size: 3.5rem;
-		padding-bottom: .5rem;
-	}
-	.title__bottom {
-		display: inline-block;
-	}
-	.header__bottom {
-		display: block;
-	}
-	.kraut {
-		font-size: 1.5rem;
-		line-height: 1.7rem;
-		font-weight: 300;
-	}
-	.copy {
-		font-size: 1.2rem;
-		font-weight: 300;
-		padding: .8rem;
-	}
-	.footer__decorator {
-		display: block;
-	}
-	.footer__text {
-		padding: 1.5rem;
-	}
+  .title__main {
+    font-size: 3.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .title__bottom {
+    display: inline-block;
+  }
+  .header__bottom {
+    height: 20px;
+  }
+  .kraut {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    font-weight: 300;
+  }
+  .copy {
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 0.8rem;
+  }
+  .footer__text {
+    padding: 1.5rem;
+  }
 }
 
 @media (min-width: 800px) {
-	.title__top {
-		display: inline-block;
-	}
-	.title__main {
-		font-size: 6rem;
-		padding-bottom: 1rem;
-	}
-	.header__bottom {
-		height: 40px;
-	}
-	.kraut {
-		max-width: 550px;
-		font-size: 1.8rem;
-		line-height: 2.2rem;
-	}
-	.copy {
-		font-size: 1.4rem;
-		padding: 1rem;
-	}
-	.footer__decorator {
-		height: 40px;
-	}
-	.footer__text {
-		padding: 2rem;
-	}
+  .title__top {
+    display: inline-block;
+  }
+  .title__main {
+    font-size: 6rem;
+    padding-bottom: 1rem;
+  }
+  .header__bottom {
+    height: 40px;
+  }
+  .kraut {
+    max-width: 550px;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  .copy {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+  .footer__text {
+    padding: 2rem;
+  }
 }
